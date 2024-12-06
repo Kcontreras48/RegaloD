@@ -1,0 +1,82 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Contenedor centrado */
+.container {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 320px;
+}
+
+/* Encabezado principal */
+h1 {
+    color: #ff69b4;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Texto de ayuda */
+p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Campo de entrada de contraseña */
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Botón de acción */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff85c3;
+}
+
+/* Mensaje de error o éxito */
+#message {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Enlace de descarga del regalo */
+#gift-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ff69b4;
+    text-decoration: none;
+}
+
+#gift-link:hover {
+    text-decoration: underline;
+}

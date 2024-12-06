@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Diana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 ¡Feliz Cumpleaños, Diana! 🎂</h1>
+        <p>Diana, introduce las contraseñas en el orden correcto para desbloquear tu regalo 🎁</p>
+        <input type="text" id="password1" placeholder="Contraseña 1" />
+        <input type="text" id="password2" placeholder="Contraseña 2" />
+        <input type="text" id="password3" placeholder="Contraseña 3" />
+        <button id="check-passwords">Desbloquear Regalo</button>
+        <p id="message"></p>
+        <a id="gift-link" href="regalo.png" download="regalo.png" style="display: none;">Descargar regalo 🎁</a>
+    </div>
+    <script>
+        // Contraseñas correctas
+        const correctPasswords = ["michio", "heroes", "dibujar"];
+
+        // Referencias a los elementos del DOM
+        const passwordInputs = [
+            document.getElementById("password1"),
+            document.getElementById("password2"),
+            document.getElementById("password3"),
+        ];
+        const checkPasswordsButton = document.getElementById("check-passwords");
+        const message = document.getElementById("message");
+        const giftLink = document.getElementById("gift-link");
+
+        // Verificar contraseñas
+        checkPasswordsButton.addEventListener("click", () => {
+            const enteredPasswords = passwordInputs.map(input => input.value.trim());
+
+            // Validar si todas las contraseñas son correctas
+            const allCorrect = enteredPasswords.every((password, index) => password === correctPasswords[index]);
+
+            if (allCorrect) {
+                message.textContent = "¡Todas las contraseñas son correctas, Diana! 🎉";
+                message.style.color = "green";
+                giftLink.style.display = "block";
+                checkPasswordsButton.style.display = "none";
+                passwordInputs.forEach(input => (input.style.display = "none"));
+            } else {
+                message.textContent = "Una o más contraseñas son incorrectas, Diana. Inténtalo de nuevo.";
+                message.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
